@@ -16,9 +16,11 @@
 @interface NESEmulator : NSObject
 
 /// The width of the screen
-@property (readonly, nonatomic) double width;
+@property (readonly, nonatomic) int width;
 /// The height of the screen
-@property (readonly, nonatomic) double height;
+@property (readonly, nonatomic) int height;
+/// The number of pixels on the screen
+@property (readonly, nonatomic) int pixels;
 
 /// Disable the default initializer for the object
 - (instancetype)init NS_UNAVAILABLE;

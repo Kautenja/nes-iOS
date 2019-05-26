@@ -7,12 +7,56 @@
 //
 
 import UIKit
+import CoreGraphics
 
 // Our iOS specific view controller
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var screen: UIImageView!
+
+    /// The NES emulator associated with this view controller
+    var emulator: NESEmulator!
+
+    /// Respond to the view loading initially
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadROM()
+        for i in 0..<50 {
+            emulator.step()
+        }
+        renderScreen()
 
+    }
+
+    func loadROM() {
+        if let romPath = Bundle.main.path(forResource: "super-mario-bros", ofType: "nes") {
+            emulator = NESEmulator(romPath: romPath)
+        } else {
+            print("ROM path broken")
+        }
+        emulator.reset()
+    }
+
+    func renderScreen() {
+//        let screenPointer = emulator.getScreenBuffer()!
+//        let screenBuffer = UnsafeBufferPointer<UInt32>.init(start: screenPointer, count: Int(emulator!.pixels) )
+//        let imageData = Data(buffer: screenBuffer)
+//        let image = UIImage.init(data: imageData)
+//        print(image)
+
+        let screenPointer = emulator.getScreenBuffer()!
+        let screenBuffer = UnsafeBufferPointer<UInt32>.init(start: screenPointer, count: Int(emulator!.pixels))
+
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let height = Int(emulator.height)
+        let width = Int(emulator.width)
+        guard let context = CGContext(data: screenPointer, width: width, height: height, bitsPerComponent: 8, bytesPerRow: 4 * width, space: colorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else {
+            print("context failed")
+            return
+        }
+
+//        let cgImage = context.makeImage()
+        let image = UIImage(cgImage: context.makeImage()!)
+        screen.image = image
     }
 }

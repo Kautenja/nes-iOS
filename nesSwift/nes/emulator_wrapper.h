@@ -22,6 +22,12 @@
 /// @param rom_path the path to the ROM to initialize the emulator with
 - (instancetype)initWithRomPath:(NSString *)rom_path;
 
+/// Backup the current emulator state.
+- (void)backup;
+
+/// Restore the emulator to the backup state.
+- (void)restore;
+
 @end
 
 #endif /* emulator_wrapper_h */

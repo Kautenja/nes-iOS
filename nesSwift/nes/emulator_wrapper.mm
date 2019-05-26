@@ -29,9 +29,12 @@
     return self;
 }
 
-//-(void)someFunc:(double)value
-//{
-//    ptrSomeClass->someFunc(value);
-//}
+- (void)backup {
+    emulator->backup();
+}
+
+- (void)restore {
+    emulator->restore();
+}
 
 @end

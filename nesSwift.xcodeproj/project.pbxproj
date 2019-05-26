@@ -52,6 +52,7 @@
 		09AE3E12229B2AE30008C759 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D54229B05520008C759 /* cpu.cpp */; };
 		09AE3E13229B2AE30008C759 /* emulator_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D75229B16360008C759 /* emulator_wrapper.mm */; };
 		09AE3E16229B2CA20008C759 /* super-mario-bros.nes in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3E15229B2CA20008C759 /* super-mario-bros.nes */; };
+		09AE3E19229B4D370008C759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3E18229B4D370008C759 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +109,7 @@
 		09AE3DDD229B29560008C759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09AE3DE2229B29560008C759 /* NES Emulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NES Emulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AE3E15229B2CA20008C759 /* super-mario-bros.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = "super-mario-bros.nes"; sourceTree = "<group>"; };
+		09AE3E18229B4D370008C759 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 				09AE3DD7229B29560008C759 /* Main.storyboard */,
 				09AE3DDA229B29560008C759 /* LaunchScreen.storyboard */,
 				09AE3DDD229B29560008C759 /* Info.plist */,
+				09AE3E18229B4D370008C759 /* Assets.xcassets */,
 			);
 			path = "NES Emulator iOS";
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				09AE3DD9229B29560008C759 /* Main.storyboard in Resources */,
 				09AE3DDC229B29560008C759 /* LaunchScreen.storyboard in Resources */,
+				09AE3E19229B4D370008C759 /* Assets.xcassets in Resources */,
 				09AE3E16229B2CA20008C759 /* super-mario-bros.nes in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

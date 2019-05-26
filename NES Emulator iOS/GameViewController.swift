@@ -21,6 +21,54 @@ class GameViewController: UIViewController {
     /// The NES emulator associated with this view controller
     var emulator: NESEmulator!
 
+    @IBAction func didPressUp() {
+        print("did press up")
+    }
+
+    @IBAction func didReleaseUp() {
+        print("did release up")
+    }
+
+    @IBAction func didPressDown() {
+        print("did press down")
+    }
+
+    @IBAction func didReleaseDown() {
+        print("did release down")
+    }
+
+    @IBAction func didPressLeft() {
+        print("did press left")
+    }
+
+    @IBAction func didReleaseLeft() {
+        print("did release left")
+    }
+
+    @IBAction func didPressRight() {
+        print("did press right")
+    }
+
+    @IBAction func didReleaseRight() {
+        print("did release right")
+    }
+
+    @IBAction func didPressA() {
+        print("did press A")
+    }
+
+    @IBAction func didReleaseA() {
+        print("did release A")
+    }
+
+    @IBAction func didPressB() {
+        print("did press B")
+    }
+
+    @IBAction func didReleaseB() {
+        print("did release B")
+    }
+
     /// Respond to the view loading initially
     override func viewDidLoad() {
         super.viewDidLoad()

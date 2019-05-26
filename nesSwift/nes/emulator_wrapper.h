@@ -21,6 +21,8 @@
 @property (readonly, nonatomic) int height;
 /// The number of pixels on the screen
 @property (readonly, nonatomic) int pixels;
+/// The number of bytes in a row of screen data
+@property (readonly, nonatomic) int bytesPerRow;
 
 /// Disable the default initializer for the object
 - (instancetype)init NS_UNAVAILABLE;

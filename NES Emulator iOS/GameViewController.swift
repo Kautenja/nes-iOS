@@ -12,7 +12,11 @@ import CoreGraphics
 // Our iOS specific view controller
 class GameViewController: UIViewController {
 
+    /// the reference to the image view that's acting as the virtual screen
     @IBOutlet weak var screen: UIImageView!
+
+    /// the context for drawing the screen
+    var context: CGContext!
 
     /// The NES emulator associated with this view controller
     var emulator: NESEmulator!
@@ -20,32 +24,43 @@ class GameViewController: UIViewController {
     /// Respond to the view loading initially
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadROM()
+        loadGame()
+
         for i in 0..<50 {
             emulator.step()
+            renderScreen()
         }
-        renderScreen()
 
     }
 
-    func loadROM() {
+    /// Load a new game into the system from a ROM file.
+    func loadGame() {
+        // try to load the dummy ROM from the bundle
         if let romPath = Bundle.main.path(forResource: "super-mario-bros", ofType: "nes") {
             emulator = NESEmulator(romPath: romPath)
         } else {
             print("ROM path broken")
+            return
         }
         emulator.reset()
-    }
-
-    func renderScreen() {
-        let screenPointer = emulator.getScreenBuffer()!
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let height = Int(emulator.height)
-        let width = Int(emulator.width)
-        guard let context = CGContext(data: screenPointer, width: width, height: height, bitsPerComponent: 8, bytesPerRow: 4 * width, space: colorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else {
+        // try to create a CGContext wrapped around the NES screen buffer
+        guard let _context = CGContext(data: emulator.getScreenBuffer()!,
+                                      width: Int(emulator.width),
+                                      height: Int(emulator.height),
+                                      bitsPerComponent: 8,
+                                      bytesPerRow: Int(emulator.bytesPerRow),
+                                      space: CGColorSpaceCreateDeviceRGB(),
+                                      bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else {
             print("context failed")
             return
         }
+        context = _context
+    }
+
+    /// Draw the screen
+    func renderScreen() {
+        screen.startAnimating()
         screen.image = UIImage(cgImage: context.makeImage()!)
+        screen.stopAnimating()
     }
 }

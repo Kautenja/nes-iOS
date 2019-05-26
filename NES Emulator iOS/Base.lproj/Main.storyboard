@@ -18,12 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAp-Vf-dbx">
-                                <rect key="frame" x="87" y="102" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yAp-Vf-dbx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="388"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yAp-Vf-dbx" secondAttribute="height" multiplier="256:240" id="mxC-jy-d3j"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yAp-Vf-dbx" firstAttribute="leading" secondItem="BKg-qs-eN0" secondAttribute="leading" id="TwF-0P-Rih"/>
+                            <constraint firstItem="BKg-qs-eN0" firstAttribute="trailing" secondItem="yAp-Vf-dbx" secondAttribute="trailing" id="fUb-8s-nDG"/>
+                            <constraint firstItem="yAp-Vf-dbx" firstAttribute="top" secondItem="BKg-qs-eN0" secondAttribute="top" id="fX1-bS-DDw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BKg-qs-eN0"/>
                     </view>
                     <connections>

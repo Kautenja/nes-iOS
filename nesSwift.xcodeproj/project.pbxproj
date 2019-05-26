@@ -28,10 +28,6 @@
 		09AE3DE5229B29560008C759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3DE4229B29560008C759 /* AppDelegate.swift */; };
 		09AE3DE7229B29560008C759 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3DE6229B29560008C759 /* GameViewController.swift */; };
 		09AE3DEA229B29560008C759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3DE8229B29560008C759 /* Main.storyboard */; };
-		09AE3DF0229B29560008C759 /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3DCB229B29550008C759 /* ShaderTypes.h */; };
-		09AE3DF1229B29560008C759 /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3DCB229B29550008C759 /* ShaderTypes.h */; };
-		09AE3DF2229B29560008C759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3DCC229B29550008C759 /* Assets.xcassets */; };
-		09AE3DF3229B29560008C759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3DCC229B29550008C759 /* Assets.xcassets */; };
 		09AE3DFA229B2A130008C759 /* ppu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D47229B05520008C759 /* ppu.cpp */; };
 		09AE3DFB229B2A130008C759 /* mapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D48229B05520008C759 /* mapper.cpp */; };
 		09AE3DFC229B2A130008C759 /* cartridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D49229B05520008C759 /* cartridge.cpp */; };
@@ -106,12 +102,6 @@
 		09AE3D72229B06570008C759 /* nes-Bridging-Header.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "nes-Bridging-Header.hpp"; sourceTree = "<group>"; };
 		09AE3D75229B16360008C759 /* emulator_wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = emulator_wrapper.mm; sourceTree = "<group>"; };
 		09AE3D77229B164E0008C759 /* emulator_wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emulator_wrapper.h; sourceTree = "<group>"; };
-		09AE3D7F229B26B40008C759 /* nesEmulator_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nesEmulator_iOS.h; sourceTree = "<group>"; };
-		09AE3D80229B26B40008C759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09AE3DC9229B29550008C759 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		09AE3DCA229B29550008C759 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		09AE3DCB229B29550008C759 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
-		09AE3DCC229B29550008C759 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09AE3DD1229B29550008C759 /* NES Emulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NES Emulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AE3DD3229B29550008C759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09AE3DD5229B29560008C759 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -154,8 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				09AE3D1A229B05260008C759 /* nesSwift */,
-				09AE3D7E229B26B40008C759 /* nesEmulator-iOS */,
-				09AE3DC8229B29550008C759 /* NES Emulator Shared */,
 				09AE3DD2229B29550008C759 /* NES Emulator iOS */,
 				09AE3DE3229B29560008C759 /* NES Emulator macOS */,
 				09AE3D19229B05260008C759 /* Products */,
@@ -249,26 +237,6 @@
 				09AE3D53229B05520008C759 /* mapper_SxROM.cpp */,
 			);
 			path = mappers;
-			sourceTree = "<group>";
-		};
-		09AE3D7E229B26B40008C759 /* nesEmulator-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				09AE3D7F229B26B40008C759 /* nesEmulator_iOS.h */,
-				09AE3D80229B26B40008C759 /* Info.plist */,
-			);
-			path = "nesEmulator-iOS";
-			sourceTree = "<group>";
-		};
-		09AE3DC8229B29550008C759 /* NES Emulator Shared */ = {
-			isa = PBXGroup;
-			children = (
-				09AE3DC9229B29550008C759 /* Shaders.metal */,
-				09AE3DCA229B29550008C759 /* Renderer.swift */,
-				09AE3DCB229B29550008C759 /* ShaderTypes.h */,
-				09AE3DCC229B29550008C759 /* Assets.xcassets */,
-			);
-			path = "NES Emulator Shared";
 			sourceTree = "<group>";
 		};
 		09AE3DD2229B29550008C759 /* NES Emulator iOS */ = {
@@ -394,9 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09AE3DF0229B29560008C759 /* ShaderTypes.h in Resources */,
 				09AE3DD9229B29560008C759 /* Main.storyboard in Resources */,
-				09AE3DF2229B29560008C759 /* Assets.xcassets in Resources */,
 				09AE3DDC229B29560008C759 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,8 +372,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09AE3DEA229B29560008C759 /* Main.storyboard in Resources */,
-				09AE3DF3229B29560008C759 /* Assets.xcassets in Resources */,
-				09AE3DF1229B29560008C759 /* ShaderTypes.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

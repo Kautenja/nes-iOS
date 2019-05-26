@@ -8,8 +8,5 @@
 
 import Foundation
 
-print("Hello, World!")
-
-let emu = NESEmulator()
-//let emu = Emulator()
-//let a: NES_Byte = 0
+let rom_path = "/Users/jameskauten/Documents/OpenEmu Library/roms/Nintendo (NES)/Zelda 1.nes"
+let emu = NESEmulator(romPath: rom_path)

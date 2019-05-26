@@ -21,9 +21,11 @@
 
 @implementation NESEmulator
 
-/// Create a new NES Emulator.
-- (id) init:(NSString*) rom_path {
-    emulator = new Emulator(std::string([rom_path UTF8String]));
+- (instancetype)initWithRomPath:(NSString *)rom_path {
+    self = [super init];
+    if (self) {
+        emulator = new Emulator(std::string([rom_path UTF8String]));
+    }
     return self;
 }
 

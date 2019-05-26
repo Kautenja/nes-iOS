@@ -12,10 +12,16 @@
 
 #import <Foundation/Foundation.h>
 
-/// This is a wrapper Objective-C++ class around the C++ Emulator class
+/// An NES emulator.
 @interface NESEmulator : NSObject
+
+/// Disable the default initializer for the object
+- (instancetype)init NS_UNAVAILABLE;
+
+/// Initialize a new NES Emulator with given ROM.
+/// @param rom_path the path to the ROM to initialize the emulator with
+- (instancetype)initWithRomPath:(NSString *)rom_path;
 
 @end
 
 #endif /* emulator_wrapper_h */
-

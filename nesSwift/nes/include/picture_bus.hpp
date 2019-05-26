@@ -11,7 +11,7 @@
 #include "common.hpp"
 #include "mapper.hpp"
 #include <vector>
-#include <stdlib.h>
+#include <cstdlib>
 
 /// The bus for graphical data to travel along
 class PictureBus {

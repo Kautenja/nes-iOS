@@ -8,13 +8,13 @@
 #ifndef COMMON_HPP
 #define COMMON_HPP
 
-#include <stdint.h>
+#include <cstdint>
 
 /// A shortcut for a byte
-typedef uint8_t NES_Byte;
+using NES_Byte = uint8_t;
 /// A shortcut for a memory address (16-bit)
-typedef uint16_t NES_Address;
+using NES_Address = uint16_t;
 /// A shortcut for a single pixel in memory
-typedef uint32_t NES_Pixel;
+using NES_Pixel = uint32_t;
 
 #endif // COMMON_HPP

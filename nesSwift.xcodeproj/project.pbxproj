@@ -20,7 +20,7 @@
 		09AE3D6C229B05520008C759 /* mapper_NROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D52229B05520008C759 /* mapper_NROM.cpp */; };
 		09AE3D6D229B05520008C759 /* mapper_SxROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D53229B05520008C759 /* mapper_SxROM.cpp */; };
 		09AE3D6E229B05520008C759 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D54229B05520008C759 /* cpu.cpp */; };
-		09AE3D74229B11800008C759 /* lib_nes_env.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D73229B11800008C759 /* lib_nes_env.cpp */; };
+		09AE3D76229B16360008C759 /* emulator_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D75229B16360008C759 /* emulator_wrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,8 +66,9 @@
 		09AE3D52229B05520008C759 /* mapper_NROM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapper_NROM.cpp; sourceTree = "<group>"; };
 		09AE3D53229B05520008C759 /* mapper_SxROM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mapper_SxROM.cpp; sourceTree = "<group>"; };
 		09AE3D54229B05520008C759 /* cpu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpu.cpp; sourceTree = "<group>"; };
-		09AE3D72229B06570008C759 /* nes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nes-Bridging-Header.h"; sourceTree = "<group>"; };
-		09AE3D73229B11800008C759 /* lib_nes_env.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lib_nes_env.cpp; sourceTree = "<group>"; };
+		09AE3D72229B06570008C759 /* nes-Bridging-Header.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "nes-Bridging-Header.hpp"; sourceTree = "<group>"; };
+		09AE3D75229B16360008C759 /* emulator_wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = emulator_wrapper.mm; sourceTree = "<group>"; };
+		09AE3D77229B164E0008C759 /* emulator_wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emulator_wrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +112,9 @@
 			children = (
 				09AE3D24229B05520008C759 /* include */,
 				09AE3D46229B05520008C759 /* src */,
-				09AE3D72229B06570008C759 /* nes-Bridging-Header.h */,
+				09AE3D77229B164E0008C759 /* emulator_wrapper.h */,
+				09AE3D75229B16360008C759 /* emulator_wrapper.mm */,
+				09AE3D72229B06570008C759 /* nes-Bridging-Header.hpp */,
 			);
 			path = nes;
 			sourceTree = "<group>";
@@ -159,7 +162,6 @@
 				09AE3D4E229B05520008C759 /* controller.cpp */,
 				09AE3D4F229B05520008C759 /* mappers */,
 				09AE3D54229B05520008C759 /* cpu.cpp */,
-				09AE3D73229B11800008C759 /* lib_nes_env.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -238,7 +240,7 @@
 				09AE3D62229B05520008C759 /* ppu.cpp in Sources */,
 				09AE3D6D229B05520008C759 /* mapper_SxROM.cpp in Sources */,
 				09AE3D6A229B05520008C759 /* mapper_CNROM.cpp in Sources */,
-				09AE3D74229B11800008C759 /* lib_nes_env.cpp in Sources */,
+				09AE3D76229B16360008C759 /* emulator_wrapper.mm in Sources */,
 				09AE3D68229B05520008C759 /* main_bus.cpp in Sources */,
 				09AE3D63229B05520008C759 /* mapper.cpp in Sources */,
 				09AE3D6C229B05520008C759 /* mapper_NROM.cpp in Sources */,
@@ -370,11 +372,15 @@
 		09AE3D20229B05260008C759 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YLBWSHF35Z;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_INPUT_FILETYPE = automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "nesSwift/nes/nes-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "nesSwift/nes/nes-Bridging-Header.hpp";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -382,11 +388,15 @@
 		09AE3D21229B05260008C759 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YLBWSHF35Z;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_INPUT_FILETYPE = automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "nesSwift/nes/nes-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "nesSwift/nes/nes-Bridging-Header.hpp";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

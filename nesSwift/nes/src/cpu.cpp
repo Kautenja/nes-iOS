@@ -145,7 +145,7 @@ bool CPU::branch(MainBus &bus, NES_Byte opcode) {
             case NEGATIVE:
                 branch = !(branch ^ flags.bits.N);
                 break;
-            case OVERFLOW:
+            case OVERFLOW_:
                 branch = !(branch ^ flags.bits.V);
                 break;
             case CARRY:

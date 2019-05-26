@@ -10,6 +10,6 @@ import Foundation
 
 print("Hello, World!")
 
-
+let emu = NESEmulator()
 //let emu = Emulator()
 //let a: NES_Byte = 0

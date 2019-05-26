@@ -29,7 +29,7 @@ const auto IRQ_VECTOR = 0xfffe;
 
 enum BranchOnFlag {
     NEGATIVE,
-    OVERFLOW,
+    OVERFLOW_, // OVERFLOW is already used in objective-c
     CARRY,
     ZERO,
 };

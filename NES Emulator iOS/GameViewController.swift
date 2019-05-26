@@ -38,15 +38,7 @@ class GameViewController: UIViewController {
     }
 
     func renderScreen() {
-//        let screenPointer = emulator.getScreenBuffer()!
-//        let screenBuffer = UnsafeBufferPointer<UInt32>.init(start: screenPointer, count: Int(emulator!.pixels) )
-//        let imageData = Data(buffer: screenBuffer)
-//        let image = UIImage.init(data: imageData)
-//        print(image)
-
         let screenPointer = emulator.getScreenBuffer()!
-        let screenBuffer = UnsafeBufferPointer<UInt32>.init(start: screenPointer, count: Int(emulator!.pixels))
-
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let height = Int(emulator.height)
         let width = Int(emulator.width)
@@ -54,9 +46,6 @@ class GameViewController: UIViewController {
             print("context failed")
             return
         }
-
-//        let cgImage = context.makeImage()
-        let image = UIImage(cgImage: context.makeImage()!)
-        screen.image = image
+        screen.image = UIImage(cgImage: context.makeImage()!)
     }
 }

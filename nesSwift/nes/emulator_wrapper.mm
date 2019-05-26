@@ -15,11 +15,20 @@
 // but we couldn't do it in mywrapper.h, which is visible from Swift and thus
 // can't contain C++ stuff.
 @interface NESEmulator () {
+    /// a pointer to the C++ emulator
     Emulator* emulator;
 }
 @end
 
 @implementation NESEmulator
+
+- (double)width {
+    return emulator->WIDTH;
+}
+
+- (double)height {
+    return emulator->HEIGHT;
+}
 
 - (instancetype)initWithRomPath:(NSString *)rom_path {
     self = [super init];

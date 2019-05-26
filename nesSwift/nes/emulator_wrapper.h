@@ -15,12 +15,20 @@
 /// An NES emulator.
 @interface NESEmulator : NSObject
 
+/// The width of the screen
+@property (readonly, nonatomic) double width;
+/// The height of the screen
+@property (readonly, nonatomic) double height;
+
 /// Disable the default initializer for the object
 - (instancetype)init NS_UNAVAILABLE;
 
 /// Initialize a new NES Emulator with given ROM.
 /// @param rom_path the path to the ROM to initialize the emulator with
 - (instancetype)initWithRomPath:(NSString *)rom_path;
+
+/// Perform a step on the emulator.
+//- (void)step;
 
 /// Backup the current emulator state.
 - (void)backup;

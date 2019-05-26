@@ -9,4 +9,5 @@
 import Foundation
 
 let rom_path = "/Users/jameskauten/Documents/OpenEmu Library/roms/Nintendo (NES)/Zelda 1.nes"
-let emu = NESEmulator(romPath: rom_path)
+let emu = NESEmulator(romPath: rom_path)!
+print(emu.height, emu.width)

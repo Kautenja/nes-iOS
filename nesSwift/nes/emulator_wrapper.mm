@@ -22,6 +22,14 @@
 
 @implementation NESEmulator
 
+- (instancetype)initWithRomPath:(NSString *)romPath {
+    self = [super init];
+    if (self) {
+        emulator = new Emulator(std::string([romPath UTF8String]));
+    }
+    return self;
+}
+
 - (double)width {
     return emulator->WIDTH;
 }
@@ -30,12 +38,24 @@
     return emulator->HEIGHT;
 }
 
-- (instancetype)initWithRomPath:(NSString *)rom_path {
-    self = [super init];
-    if (self) {
-        emulator = new Emulator(std::string([rom_path UTF8String]));
-    }
-    return self;
+- (UInt32*)getScreenBuffer {
+    return emulator->get_screen_buffer();
+}
+
+- (UInt8*)getMemoryBuffer {
+    return emulator->get_memory_buffer();
+}
+
+- (UInt8*)getController:(int)port {
+    return emulator->get_controller(port);
+}
+
+- (void)reset {
+    emulator->reset();
+}
+
+- (void)step {
+    emulator->step();
 }
 
 - (void)backup {

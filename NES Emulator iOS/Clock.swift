@@ -18,6 +18,10 @@ class Clock {
     /// @param fps the framerate to run the clock at
     init(fps: Double) {
         spf = 1 / fps
+        let timer = Timer.init(timeInterval: 1.0 / 60.0, repeats: true) { (timer) in
+            print("plopt")
+        }
+        timer.fire()
     }
 
     var fps: Double {

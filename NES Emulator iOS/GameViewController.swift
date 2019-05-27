@@ -62,27 +62,23 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         loadGame()
         // start the game loop in the background
-        DispatchQueue.global(qos: .background).async {
-            // create a clock to limit the framerate
-            let clock = Clock(fps: 60)
-            // TODO: remove hardcoded true flag so game can shutdown
-            while true {
-                clock.tick(function: {
-                    self.emulator.step()
-//                    DispatchQueue.main.async {
-//                        self.renderScreen()
-//                    }
-                })
-            }
+        DispatchQueue.global(qos: .userInteractive).async {
+            let timer = Timer(timeInterval: 1.0 / 60.0,
+                              target: self,
+                              selector: #selector(self.step),
+                              userInfo: nil,
+                              repeats: true)
+            RunLoop.current.add(timer, forMode: .common)
+            RunLoop.current.run()
         }
+    }
 
-        DispatchQueue.global(qos: .background).async {
-            while true {
-                usleep(UInt32(16e3))
-                DispatchQueue.main.async {
-                    self.renderScreen()
-                }
-            }
+    /// Perform a step on the emulator and render the screen
+    @objc func step() {
+        self.emulator.step()
+        // render the screen on the UI thread
+        DispatchQueue.main.async {
+            self.renderScreen()
         }
     }
 
@@ -114,7 +110,7 @@ class GameViewController: UIViewController {
     }
 
     /// Draw the screen
-    func renderScreen() {
+    @objc func renderScreen() {
         screen.image = UIImage(cgImage: context.makeImage()!)
     }
 

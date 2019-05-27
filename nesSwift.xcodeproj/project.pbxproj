@@ -54,7 +54,6 @@
 		09AE3E13229B2AE30008C759 /* emulator_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D75229B16360008C759 /* emulator_wrapper.mm */; };
 		09AE3E16229B2CA20008C759 /* super-mario-bros.nes in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3E15229B2CA20008C759 /* super-mario-bros.nes */; };
 		09AE3E19229B4D370008C759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3E18229B4D370008C759 /* Assets.xcassets */; };
-		09AE3E1B229B6C550008C759 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3E1A229B6C550008C759 /* Clock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,7 +112,6 @@
 		09AE3DE2229B29560008C759 /* NES Emulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NES Emulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AE3E15229B2CA20008C759 /* super-mario-bros.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = "super-mario-bros.nes"; sourceTree = "<group>"; };
 		09AE3E18229B4D370008C759 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		09AE3E1A229B6C550008C759 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +243,6 @@
 			children = (
 				09AE3DD3229B29550008C759 /* AppDelegate.swift */,
 				09AE3DD5229B29560008C759 /* GameViewController.swift */,
-				09AE3E1A229B6C550008C759 /* Clock.swift */,
 				09AE3DD7229B29560008C759 /* Main.storyboard */,
 				09AE3DDA229B29560008C759 /* LaunchScreen.storyboard */,
 				09AE3DDD229B29560008C759 /* Info.plist */,
@@ -408,7 +405,6 @@
 			files = (
 				09AE3DFA229B2A130008C759 /* ppu.cpp in Sources */,
 				09AE3DFB229B2A130008C759 /* mapper.cpp in Sources */,
-				09AE3E1B229B6C550008C759 /* Clock.swift in Sources */,
 				09AE3DFC229B2A130008C759 /* cartridge.cpp in Sources */,
 				09AE3DFD229B2A130008C759 /* emulator.cpp in Sources */,
 				09AE3DFE229B2A130008C759 /* picture_bus.cpp in Sources */,

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		095005C7229B797A003CAF8E /* tetris.nes in Resources */ = {isa = PBXBuildFile; fileRef = 095005C6229B797A003CAF8E /* tetris.nes */; };
+		095005C9229B8E00003CAF8E /* zelda1.nes in Resources */ = {isa = PBXBuildFile; fileRef = 095005C8229B8E00003CAF8E /* zelda1.nes */; };
 		09AE3D1C229B05260008C759 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D1B229B05260008C759 /* main.swift */; };
 		09AE3D62229B05520008C759 /* ppu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D47229B05520008C759 /* ppu.cpp */; };
 		09AE3D63229B05520008C759 /* mapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D48229B05520008C759 /* mapper.cpp */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		095005C6229B797A003CAF8E /* tetris.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = tetris.nes; sourceTree = "<group>"; };
+		095005C8229B8E00003CAF8E /* zelda1.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = zelda1.nes; sourceTree = "<group>"; };
 		09AE3D18229B05260008C759 /* nesSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nesSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AE3D1B229B05260008C759 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		09AE3D25229B05520008C759 /* controller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = controller.hpp; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				095005C6229B797A003CAF8E /* tetris.nes */,
 				09AE3E15229B2CA20008C759 /* super-mario-bros.nes */,
+				095005C8229B8E00003CAF8E /* zelda1.nes */,
 			);
 			path = ROMs;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				09AE3DD9229B29560008C759 /* Main.storyboard in Resources */,
 				09AE3DDC229B29560008C759 /* LaunchScreen.storyboard in Resources */,
 				09AE3E19229B4D370008C759 /* Assets.xcassets in Resources */,
+				095005C9229B8E00003CAF8E /* zelda1.nes in Resources */,
 				095005C7229B797A003CAF8E /* tetris.nes in Resources */,
 				09AE3E16229B2CA20008C759 /* super-mario-bros.nes in Resources */,
 			);

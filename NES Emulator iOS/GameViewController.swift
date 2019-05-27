@@ -85,7 +85,7 @@ class GameViewController: UIViewController {
     /// Load a new game into the system from a ROM file.
     func loadGame() {
         // try to load the dummy ROM from the bundle
-        if let romPath = Bundle.main.path(forResource: "super-mario-bros", ofType: "nes") {
+        if let romPath = Bundle.main.path(forResource: "zelda1", ofType: "nes") {
             emulator = NESEmulator(romPath: romPath)
         } else {
             print("ROM path broken")

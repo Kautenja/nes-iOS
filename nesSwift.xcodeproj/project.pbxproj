@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095005C7229B797A003CAF8E /* tetris.nes in Resources */ = {isa = PBXBuildFile; fileRef = 095005C6229B797A003CAF8E /* tetris.nes */; };
+		095005C9229B8E00003CAF8E /* zelda1.nes in Resources */ = {isa = PBXBuildFile; fileRef = 095005C8229B8E00003CAF8E /* zelda1.nes */; };
 		09AE3D1C229B05260008C759 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D1B229B05260008C759 /* main.swift */; };
 		09AE3D62229B05520008C759 /* ppu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D47229B05520008C759 /* ppu.cpp */; };
 		09AE3D63229B05520008C759 /* mapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D48229B05520008C759 /* mapper.cpp */; };
@@ -21,6 +23,38 @@
 		09AE3D6D229B05520008C759 /* mapper_SxROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D53229B05520008C759 /* mapper_SxROM.cpp */; };
 		09AE3D6E229B05520008C759 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D54229B05520008C759 /* cpu.cpp */; };
 		09AE3D76229B16360008C759 /* emulator_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D75229B16360008C759 /* emulator_wrapper.mm */; };
+		09AE3DD4229B29560008C759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3DD3229B29550008C759 /* AppDelegate.swift */; };
+		09AE3DD6229B29560008C759 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3DD5229B29560008C759 /* GameViewController.swift */; };
+		09AE3DD9229B29560008C759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3DD7229B29560008C759 /* Main.storyboard */; };
+		09AE3DDC229B29560008C759 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3DDA229B29560008C759 /* LaunchScreen.storyboard */; };
+		09AE3DFA229B2A130008C759 /* ppu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D47229B05520008C759 /* ppu.cpp */; };
+		09AE3DFB229B2A130008C759 /* mapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D48229B05520008C759 /* mapper.cpp */; };
+		09AE3DFC229B2A130008C759 /* cartridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D49229B05520008C759 /* cartridge.cpp */; };
+		09AE3DFD229B2A130008C759 /* emulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D4A229B05520008C759 /* emulator.cpp */; };
+		09AE3DFE229B2A130008C759 /* picture_bus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D4C229B05520008C759 /* picture_bus.cpp */; };
+		09AE3DFF229B2A130008C759 /* main_bus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D4D229B05520008C759 /* main_bus.cpp */; };
+		09AE3E00229B2A130008C759 /* controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D4E229B05520008C759 /* controller.cpp */; };
+		09AE3E01229B2A130008C759 /* mapper_CNROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D50229B05520008C759 /* mapper_CNROM.cpp */; };
+		09AE3E02229B2A130008C759 /* mapper_UxROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D51229B05520008C759 /* mapper_UxROM.cpp */; };
+		09AE3E03229B2A130008C759 /* mapper_NROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D52229B05520008C759 /* mapper_NROM.cpp */; };
+		09AE3E04229B2A130008C759 /* mapper_SxROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D53229B05520008C759 /* mapper_SxROM.cpp */; };
+		09AE3E05229B2A130008C759 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D54229B05520008C759 /* cpu.cpp */; };
+		09AE3E06229B2A130008C759 /* emulator_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D75229B16360008C759 /* emulator_wrapper.mm */; };
+		09AE3E07229B2AE30008C759 /* ppu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D47229B05520008C759 /* ppu.cpp */; };
+		09AE3E08229B2AE30008C759 /* mapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D48229B05520008C759 /* mapper.cpp */; };
+		09AE3E09229B2AE30008C759 /* cartridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D49229B05520008C759 /* cartridge.cpp */; };
+		09AE3E0A229B2AE30008C759 /* emulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D4A229B05520008C759 /* emulator.cpp */; };
+		09AE3E0B229B2AE30008C759 /* picture_bus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D4C229B05520008C759 /* picture_bus.cpp */; };
+		09AE3E0C229B2AE30008C759 /* main_bus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D4D229B05520008C759 /* main_bus.cpp */; };
+		09AE3E0D229B2AE30008C759 /* controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D4E229B05520008C759 /* controller.cpp */; };
+		09AE3E0E229B2AE30008C759 /* mapper_CNROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D50229B05520008C759 /* mapper_CNROM.cpp */; };
+		09AE3E0F229B2AE30008C759 /* mapper_UxROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D51229B05520008C759 /* mapper_UxROM.cpp */; };
+		09AE3E10229B2AE30008C759 /* mapper_NROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D52229B05520008C759 /* mapper_NROM.cpp */; };
+		09AE3E11229B2AE30008C759 /* mapper_SxROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D53229B05520008C759 /* mapper_SxROM.cpp */; };
+		09AE3E12229B2AE30008C759 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D54229B05520008C759 /* cpu.cpp */; };
+		09AE3E13229B2AE30008C759 /* emulator_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D75229B16360008C759 /* emulator_wrapper.mm */; };
+		09AE3E16229B2CA20008C759 /* super-mario-bros.nes in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3E15229B2CA20008C759 /* super-mario-bros.nes */; };
+		09AE3E19229B4D370008C759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AE3E18229B4D370008C759 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		095005C6229B797A003CAF8E /* tetris.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = tetris.nes; sourceTree = "<group>"; };
+		095005C8229B8E00003CAF8E /* zelda1.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = zelda1.nes; sourceTree = "<group>"; };
 		09AE3D18229B05260008C759 /* nesSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nesSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AE3D1B229B05260008C759 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		09AE3D25229B05520008C759 /* controller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = controller.hpp; sourceTree = "<group>"; };
@@ -69,10 +105,33 @@
 		09AE3D72229B06570008C759 /* nes-Bridging-Header.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "nes-Bridging-Header.hpp"; sourceTree = "<group>"; };
 		09AE3D75229B16360008C759 /* emulator_wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = emulator_wrapper.mm; sourceTree = "<group>"; };
 		09AE3D77229B164E0008C759 /* emulator_wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emulator_wrapper.h; sourceTree = "<group>"; };
+		09AE3DD1229B29550008C759 /* NES Emulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NES Emulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09AE3DD3229B29550008C759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09AE3DD5229B29560008C759 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		09AE3DD8229B29560008C759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09AE3DDB229B29560008C759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09AE3DDD229B29560008C759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09AE3DE2229B29560008C759 /* NES Emulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NES Emulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09AE3E15229B2CA20008C759 /* super-mario-bros.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = "super-mario-bros.nes"; sourceTree = "<group>"; };
+		09AE3E18229B4D370008C759 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		09AE3D15229B05260008C759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09AE3DCE229B29550008C759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09AE3DDF229B29560008C759 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,7 +144,9 @@
 		09AE3D0F229B05260008C759 = {
 			isa = PBXGroup;
 			children = (
+				09AE3E14229B2CA20008C759 /* ROMs */,
 				09AE3D1A229B05260008C759 /* nesSwift */,
+				09AE3DD2229B29550008C759 /* NES Emulator iOS */,
 				09AE3D19229B05260008C759 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				09AE3D18229B05260008C759 /* nesSwift */,
+				09AE3DD1229B29550008C759 /* NES Emulator.app */,
+				09AE3DE2229B29560008C759 /* NES Emulator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +240,29 @@
 			path = mappers;
 			sourceTree = "<group>";
 		};
+		09AE3DD2229B29550008C759 /* NES Emulator iOS */ = {
+			isa = PBXGroup;
+			children = (
+				09AE3DD3229B29550008C759 /* AppDelegate.swift */,
+				09AE3DD5229B29560008C759 /* GameViewController.swift */,
+				09AE3DD7229B29560008C759 /* Main.storyboard */,
+				09AE3DDA229B29560008C759 /* LaunchScreen.storyboard */,
+				09AE3DDD229B29560008C759 /* Info.plist */,
+				09AE3E18229B4D370008C759 /* Assets.xcassets */,
+			);
+			path = "NES Emulator iOS";
+			sourceTree = "<group>";
+		};
+		09AE3E14229B2CA20008C759 /* ROMs */ = {
+			isa = PBXGroup;
+			children = (
+				095005C6229B797A003CAF8E /* tetris.nes */,
+				09AE3E15229B2CA20008C759 /* super-mario-bros.nes */,
+				095005C8229B8E00003CAF8E /* zelda1.nes */,
+			);
+			path = ROMs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,6 +283,40 @@
 			productReference = 09AE3D18229B05260008C759 /* nesSwift */;
 			productType = "com.apple.product-type.tool";
 		};
+		09AE3DD0229B29550008C759 /* NES Emulator iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09AE3DF4229B29560008C759 /* Build configuration list for PBXNativeTarget "NES Emulator iOS" */;
+			buildPhases = (
+				09AE3DCD229B29550008C759 /* Sources */,
+				09AE3DCE229B29550008C759 /* Frameworks */,
+				09AE3DCF229B29550008C759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NES Emulator iOS";
+			productName = "NES Emulator iOS";
+			productReference = 09AE3DD1229B29550008C759 /* NES Emulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09AE3DE1229B29560008C759 /* NES Emulator macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09AE3DF7229B29560008C759 /* Build configuration list for PBXNativeTarget "NES Emulator macOS" */;
+			buildPhases = (
+				09AE3DDE229B29560008C759 /* Sources */,
+				09AE3DDF229B29560008C759 /* Frameworks */,
+				09AE3DE0229B29560008C759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NES Emulator macOS";
+			productName = "NES Emulator macOS";
+			productReference = 09AE3DE2229B29560008C759 /* NES Emulator.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +330,12 @@
 					09AE3D17229B05260008C759 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					09AE3DD0229B29550008C759 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					09AE3DE1229B29560008C759 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 09AE3D13229B05260008C759 /* Build configuration list for PBXProject "nesSwift" */;
@@ -218,6 +344,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 09AE3D0F229B05260008C759;
 			productRefGroup = 09AE3D19229B05260008C759 /* Products */;
@@ -225,9 +352,34 @@
 			projectRoot = "";
 			targets = (
 				09AE3D17229B05260008C759 /* nesSwift */,
+				09AE3DD0229B29550008C759 /* NES Emulator iOS */,
+				09AE3DE1229B29560008C759 /* NES Emulator macOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09AE3DCF229B29550008C759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09AE3DD9229B29560008C759 /* Main.storyboard in Resources */,
+				09AE3DDC229B29560008C759 /* LaunchScreen.storyboard in Resources */,
+				09AE3E19229B4D370008C759 /* Assets.xcassets in Resources */,
+				095005C9229B8E00003CAF8E /* zelda1.nes in Resources */,
+				095005C7229B797A003CAF8E /* tetris.nes in Resources */,
+				09AE3E16229B2CA20008C759 /* super-mario-bros.nes in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09AE3DE0229B29560008C759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09AE3D14229B05260008C759 /* Sources */ = {
@@ -251,7 +403,68 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09AE3DCD229B29550008C759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09AE3DFA229B2A130008C759 /* ppu.cpp in Sources */,
+				09AE3DFB229B2A130008C759 /* mapper.cpp in Sources */,
+				09AE3DFC229B2A130008C759 /* cartridge.cpp in Sources */,
+				09AE3DFD229B2A130008C759 /* emulator.cpp in Sources */,
+				09AE3DFE229B2A130008C759 /* picture_bus.cpp in Sources */,
+				09AE3DFF229B2A130008C759 /* main_bus.cpp in Sources */,
+				09AE3E00229B2A130008C759 /* controller.cpp in Sources */,
+				09AE3E01229B2A130008C759 /* mapper_CNROM.cpp in Sources */,
+				09AE3E02229B2A130008C759 /* mapper_UxROM.cpp in Sources */,
+				09AE3E03229B2A130008C759 /* mapper_NROM.cpp in Sources */,
+				09AE3E04229B2A130008C759 /* mapper_SxROM.cpp in Sources */,
+				09AE3E05229B2A130008C759 /* cpu.cpp in Sources */,
+				09AE3E06229B2A130008C759 /* emulator_wrapper.mm in Sources */,
+				09AE3DD6229B29560008C759 /* GameViewController.swift in Sources */,
+				09AE3DD4229B29560008C759 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09AE3DDE229B29560008C759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09AE3E07229B2AE30008C759 /* ppu.cpp in Sources */,
+				09AE3E08229B2AE30008C759 /* mapper.cpp in Sources */,
+				09AE3E09229B2AE30008C759 /* cartridge.cpp in Sources */,
+				09AE3E0A229B2AE30008C759 /* emulator.cpp in Sources */,
+				09AE3E0B229B2AE30008C759 /* picture_bus.cpp in Sources */,
+				09AE3E0C229B2AE30008C759 /* main_bus.cpp in Sources */,
+				09AE3E0D229B2AE30008C759 /* controller.cpp in Sources */,
+				09AE3E0E229B2AE30008C759 /* mapper_CNROM.cpp in Sources */,
+				09AE3E0F229B2AE30008C759 /* mapper_UxROM.cpp in Sources */,
+				09AE3E10229B2AE30008C759 /* mapper_NROM.cpp in Sources */,
+				09AE3E11229B2AE30008C759 /* mapper_SxROM.cpp in Sources */,
+				09AE3E12229B2AE30008C759 /* cpu.cpp in Sources */,
+				09AE3E13229B2AE30008C759 /* emulator_wrapper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		09AE3DD7229B29560008C759 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09AE3DD8229B29560008C759 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		09AE3DDA229B29560008C759 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09AE3DDB229B29560008C759 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		09AE3D1D229B05260008C759 /* Debug */ = {
@@ -401,6 +614,97 @@
 			};
 			name = Release;
 		};
+		09AE3DF5229B29560008C759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YLBWSHF35Z;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = "NES Emulator iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kautenja.NES-Emulator";
+				PRODUCT_NAME = "NES Emulator";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "nesSwift/nes/nes-Bridging-Header.hpp";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09AE3DF6229B29560008C759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YLBWSHF35Z;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = "NES Emulator iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kautenja.NES-Emulator";
+				PRODUCT_NAME = "NES Emulator";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "nesSwift/nes/nes-Bridging-Header.hpp";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09AE3DF8229B29560008C759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YLBWSHF35Z;
+				INFOPLIST_FILE = "NES Emulator macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kautenja.NES-Emulator";
+				PRODUCT_NAME = "NES Emulator";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "nesSwift/nes/nes-Bridging-Header.hpp";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		09AE3DF9229B29560008C759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YLBWSHF35Z;
+				INFOPLIST_FILE = "NES Emulator macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kautenja.NES-Emulator";
+				PRODUCT_NAME = "NES Emulator";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "nesSwift/nes/nes-Bridging-Header.hpp";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -418,6 +722,24 @@
 			buildConfigurations = (
 				09AE3D20229B05260008C759 /* Debug */,
 				09AE3D21229B05260008C759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09AE3DF4229B29560008C759 /* Build configuration list for PBXNativeTarget "NES Emulator iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09AE3DF5229B29560008C759 /* Debug */,
+				09AE3DF6229B29560008C759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09AE3DF7229B29560008C759 /* Build configuration list for PBXNativeTarget "NES Emulator macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09AE3DF8229B29560008C759 /* Debug */,
+				09AE3DF9229B29560008C759 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

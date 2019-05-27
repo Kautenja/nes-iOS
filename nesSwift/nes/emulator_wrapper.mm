@@ -30,12 +30,20 @@
     return self;
 }
 
-- (double)width {
+- (int)width {
     return emulator->WIDTH;
 }
 
-- (double)height {
+- (int)height {
     return emulator->HEIGHT;
+}
+
+- (int)pixels {
+    return self.height * self.width;
+}
+
+- (int)bytesPerRow {
+    return sizeof(NES_Pixel) * self.width;
 }
 
 - (UInt32*)getScreenBuffer {

@@ -90,11 +90,21 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         loadGame()
 
-        for i in 0..<50 {
-            emulator.step()
-            renderScreen()
-        }
+        DispatchQueue.global(qos: .background).async {
+            var now = Date().timeIntervalSinceReferenceDate
+            var fps = 0.0
+            while true {
+                self.emulator.step()
+                let dTime = Date().timeIntervalSinceReferenceDate - now
+                now = Date().timeIntervalSinceReferenceDate
+                fps = 1 / dTime
+                print(fps)
 
+                DispatchQueue.main.async {
+                    self.renderScreen()
+                }
+            }
+        }
     }
 
     /// Load a new game into the system from a ROM file.
@@ -123,8 +133,6 @@ class GameViewController: UIViewController {
 
     /// Draw the screen
     func renderScreen() {
-        screen.startAnimating()
         screen.image = UIImage(cgImage: context.makeImage()!)
-        screen.stopAnimating()
     }
 }

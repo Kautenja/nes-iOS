@@ -69,10 +69,19 @@ class GameViewController: UIViewController {
             while true {
                 clock.tick(function: {
                     self.emulator.step()
-                    DispatchQueue.main.async {
-                        self.renderScreen()
-                    }
+//                    DispatchQueue.main.async {
+//                        self.renderScreen()
+//                    }
                 })
+            }
+        }
+
+        DispatchQueue.global(qos: .background).async {
+            while true {
+                usleep(UInt32(16e3))
+                DispatchQueue.main.async {
+                    self.renderScreen()
+                }
             }
         }
     }

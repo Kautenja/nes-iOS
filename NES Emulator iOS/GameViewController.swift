@@ -9,6 +9,16 @@
 import UIKit
 import CoreGraphics
 
+/// Bit locations for controller actions
+let CONTROLLER_RIGHT: UInt8 =  0b10000000
+let CONTROLLER_LEFT: UInt8 =   0b01000000
+let CONTROLLER_DOWN: UInt8 =   0b00100000
+let CONTROLLER_UP: UInt8 =     0b00010000
+let CONTROLLER_START: UInt8 =  0b00001000
+let CONTROLLER_SELECT: UInt8 = 0b00000100
+let CONTROLLER_B: UInt8 =      0b00000010
+let CONTROLLER_A: UInt8 =      0b00000001
+
 // Our iOS specific view controller
 class GameViewController: UIViewController {
 
@@ -18,71 +28,74 @@ class GameViewController: UIViewController {
     /// the context for drawing the screen
     var context: CGContext!
 
+    /// The buffer for writing controller actions
+    var controller: UnsafeMutablePointer<UInt8>!
+
     /// The NES emulator associated with this view controller
     var emulator: NESEmulator!
 
     @IBAction func didPressStart() {
-        print("did press start")
+        controller[0] |= CONTROLLER_START
     }
 
     @IBAction func didReleaseStart() {
-        print("did release start")
+        controller[0] &= ~CONTROLLER_START
     }
 
     @IBAction func didPressSelect() {
-        print("did press select")
+        controller[0] |= CONTROLLER_SELECT
     }
 
     @IBAction func didReleaseSelect() {
-        print("did release select")
+        controller[0] &= ~CONTROLLER_SELECT
     }
 
     @IBAction func didPressUp() {
-        print("did press up")
+        controller[0] |= CONTROLLER_UP
     }
 
     @IBAction func didReleaseUp() {
-        print("did release up")
+        controller[0] &= ~CONTROLLER_UP
     }
 
     @IBAction func didPressDown() {
-        print("did press down")
+        controller[0] |= CONTROLLER_DOWN
     }
 
     @IBAction func didReleaseDown() {
-        print("did release down")
+        controller[0] &= ~CONTROLLER_DOWN
     }
 
     @IBAction func didPressLeft() {
-        print("did press left")
+        controller[0] |= CONTROLLER_LEFT
     }
 
     @IBAction func didReleaseLeft() {
-        print("did release left")
+        controller[0] &= ~CONTROLLER_LEFT
     }
 
     @IBAction func didPressRight() {
-        print("did press right")
+        controller[0] |= CONTROLLER_RIGHT
     }
 
     @IBAction func didReleaseRight() {
-        print("did release right")
+        controller[0] &= ~CONTROLLER_RIGHT
     }
 
     @IBAction func didPressA() {
-        print("did press A")
+        controller[0] |= CONTROLLER_A
     }
 
     @IBAction func didReleaseA() {
-        print("did release A")
+        controller[0] &= ~CONTROLLER_A
     }
 
     @IBAction func didPressB() {
-        print("did press B")
+        controller[0] |= CONTROLLER_B
     }
 
     @IBAction func didReleaseB() {
-        print("did release B")
+        controller[0] &= ~CONTROLLER_B
     }
 
     /// Respond to the view loading initially
@@ -91,18 +104,14 @@ class GameViewController: UIViewController {
         loadGame()
 
         DispatchQueue.global(qos: .background).async {
-            var now = Date().timeIntervalSinceReferenceDate
-            var fps = 0.0
+            let clock = Clock(fps: 60)
             while true {
-                self.emulator.step()
-                let dTime = Date().timeIntervalSinceReferenceDate - now
-                now = Date().timeIntervalSinceReferenceDate
-                fps = 1 / dTime
-                print(fps)
-
-                DispatchQueue.main.async {
-                    self.renderScreen()
-                }
+                clock.tick(function: {
+                    self.emulator.step()
+                    DispatchQueue.main.async {
+                        self.renderScreen()
+                    }
+                })
             }
         }
     }
@@ -129,10 +138,13 @@ class GameViewController: UIViewController {
             return
         }
         context = _context
+        // get the buffer for the controller
+        controller = emulator.getController(0)
     }
 
     /// Draw the screen
     func renderScreen() {
         screen.image = UIImage(cgImage: context.makeImage()!)
     }
+
 }

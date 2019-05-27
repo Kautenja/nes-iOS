@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,24 +15,24 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="NES_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yAp-Vf-dbx">
-                                <rect key="frame" x="0.0" y="44" width="375" height="351.66666666666669"/>
+                                <rect key="frame" x="217.33333333333334" y="0.0" width="377.33333333333326" height="354"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yAp-Vf-dbx" secondAttribute="height" multiplier="256:240" id="mxC-jy-d3j"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-M6-7ha">
-                                <rect key="frame" x="0.0" y="395.66666666666674" width="375" height="382.33333333333326"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-M6-7ha">
+                                <rect key="frame" x="44" y="395.66666666666674" width="500" height="382.33333333333326"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmT-7F-g9W">
-                                        <rect key="frame" x="187.66666666666666" y="234.33333333333329" width="78.666666666666657" height="78.666666666666657"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmT-7F-g9W">
+                                        <rect key="frame" x="250" y="234.33333333333326" width="110" height="78.666666666666629"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDL-kO-Q4x">
-                                                <rect key="frame" x="5" y="5" width="68.666666666666671" height="68.666666666666671"/>
+                                                <rect key="frame" x="5" y="5" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="YDL-kO-Q4x" secondAttribute="height" multiplier="1:1" id="dWA-DK-Vn5"/>
                                                 </constraints>
@@ -62,11 +62,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHr-o7-eng">
-                                        <rect key="frame" x="276.33333333333331" y="234.33333333333329" width="78.666666666666686" height="78.666666666666657"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHr-o7-eng">
+                                        <rect key="frame" x="370" y="234.33333333333326" width="110" height="78.666666666666629"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46G-EX-YPe">
-                                                <rect key="frame" x="5" y="5" width="68.666666666666671" height="68.666666666666671"/>
+                                                <rect key="frame" x="5" y="5" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="46G-EX-YPe" secondAttribute="height" multiplier="1:1" id="9a7-vL-Rwz"/>
                                                 </constraints>
@@ -97,11 +97,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfo-6d-nuL">
-                                        <rect key="frame" x="20" y="194.99999999999994" width="157.66666666666666" height="157.33333333333331"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfo-6d-nuL">
+                                        <rect key="frame" x="20" y="194.99999999999997" width="220" height="157.33333333333329"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnI-xU-Mhc">
-                                                <rect key="frame" x="54.333333333333329" y="5" width="49" height="49"/>
+                                                <rect key="frame" x="75" y="5" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LnI-xU-Mhc" secondAttribute="height" multiplier="1:1" id="Ugn-Pi-P2K"/>
                                                 </constraints>
@@ -112,7 +112,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OB-KH-fMx">
-                                                <rect key="frame" x="5" y="54" width="49.333333333333336" height="49.333333333333343"/>
+                                                <rect key="frame" x="5" y="75" width="70" height="70"/>
                                                 <connections>
                                                     <action selector="didPressLeft" destination="BV1-FR-VrT" eventType="touchDown" id="IJT-f8-PZq"/>
                                                     <action selector="didReleaseLeft" destination="BV1-FR-VrT" eventType="touchUpOutside" id="80M-nH-m1a"/>
@@ -120,7 +120,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yw-b8-uYO">
-                                                <rect key="frame" x="54.333333333333329" y="103.33333333333337" width="49" height="49"/>
+                                                <rect key="frame" x="75" y="145" width="70" height="70"/>
                                                 <connections>
                                                     <action selector="didPressDown" destination="BV1-FR-VrT" eventType="touchDown" id="hMU-qK-wnC"/>
                                                     <action selector="didReleaseDown" destination="BV1-FR-VrT" eventType="touchUpOutside" id="AjT-80-UEi"/>
@@ -128,7 +128,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9E-e0-lUM">
-                                                <rect key="frame" x="103.33333333333333" y="54" width="49.333333333333329" height="49.333333333333343"/>
+                                                <rect key="frame" x="145" y="75" width="70" height="70"/>
                                                 <connections>
                                                     <action selector="didPressRight" destination="BV1-FR-VrT" eventType="touchDown" id="aBi-bd-wWH"/>
                                                     <action selector="didReleaseRight" destination="BV1-FR-VrT" eventType="touchUpInside" id="Hav-Bg-8jQ"/>
@@ -136,7 +136,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D-Pad" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-MD-dxY">
-                                                <rect key="frame" x="8" y="8" width="141.66666666666666" height="141.33333333333334"/>
+                                                <rect key="frame" x="8" y="8" width="204" height="204"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,11 +165,11 @@
                                             <constraint firstItem="LnI-xU-Mhc" firstAttribute="height" secondItem="9OB-KH-fMx" secondAttribute="height" id="z0K-Mv-UFa"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wiQ-1A-fQb">
-                                        <rect key="frame" x="98.666666666666686" y="162.99999999999994" width="79" height="20"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wiQ-1A-fQb">
+                                        <rect key="frame" x="130" y="162.99999999999994" width="110" height="20"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wl-jH-jJf">
-                                                <rect key="frame" x="3" y="3" width="73" height="14"/>
+                                                <rect key="frame" x="3" y="3" width="104" height="14"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -194,11 +194,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEr-XN-a1l">
-                                        <rect key="frame" x="197.66666666666666" y="162.99999999999994" width="78.666666666666657" height="20"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEr-XN-a1l">
+                                        <rect key="frame" x="260" y="162.99999999999994" width="110" height="20"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTB-Bt-cYQ">
-                                                <rect key="frame" x="3" y="3" width="72.666666666666671" height="14"/>
+                                                <rect key="frame" x="3" y="3" width="104" height="14"/>
                                                 <state key="normal" title="Start">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -222,8 +222,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmP-fq-qfU">
-                                        <rect key="frame" x="187.66666666666666" y="172.99999999999994" width="0.0" height="0.0"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BmP-fq-qfU">
+                                        <rect key="frame" x="250" y="172.99999999999994" width="0.0" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" id="HM0-Zd-SCJ"/>
@@ -257,14 +257,32 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BKg-qs-eN0" firstAttribute="bottom" secondItem="sz2-M6-7ha" secondAttribute="bottom" id="2Ht-w0-Ffb"/>
+                            <constraint firstItem="yAp-Vf-dbx" firstAttribute="centerX" secondItem="BKg-qs-eN0" secondAttribute="centerX" id="BE6-kf-VMP"/>
                             <constraint firstItem="sz2-M6-7ha" firstAttribute="top" secondItem="yAp-Vf-dbx" secondAttribute="bottom" id="J1D-8E-5xA"/>
                             <constraint firstItem="yAp-Vf-dbx" firstAttribute="leading" secondItem="BKg-qs-eN0" secondAttribute="leading" id="TwF-0P-Rih"/>
                             <constraint firstItem="BKg-qs-eN0" firstAttribute="trailing" secondItem="yAp-Vf-dbx" secondAttribute="trailing" id="fUb-8s-nDG"/>
                             <constraint firstItem="yAp-Vf-dbx" firstAttribute="top" secondItem="BKg-qs-eN0" secondAttribute="top" id="fX1-bS-DDw"/>
                             <constraint firstItem="BKg-qs-eN0" firstAttribute="trailing" secondItem="sz2-M6-7ha" secondAttribute="trailing" id="kaW-5q-29q"/>
                             <constraint firstItem="sz2-M6-7ha" firstAttribute="leading" secondItem="BKg-qs-eN0" secondAttribute="leading" id="l5K-t2-p0g"/>
+                            <constraint firstItem="yAp-Vf-dbx" firstAttribute="bottom" secondItem="BKg-qs-eN0" secondAttribute="bottom" id="tIG-Zr-HrT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BKg-qs-eN0"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BE6-kf-VMP"/>
+                                <exclude reference="tIG-Zr-HrT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="BE6-kf-VMP"/>
+                                <exclude reference="TwF-0P-Rih"/>
+                                <include reference="tIG-Zr-HrT"/>
+                                <exclude reference="fUb-8s-nDG"/>
+                                <exclude reference="kaW-5q-29q"/>
+                                <exclude reference="J1D-8E-5xA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="screen" destination="yAp-Vf-dbx" id="w9x-Fi-bI1"/>

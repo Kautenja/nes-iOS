@@ -21,6 +21,22 @@ class GameViewController: UIViewController {
     /// The NES emulator associated with this view controller
     var emulator: NESEmulator!
 
+    @IBAction func didPressStart() {
+        print("did press start")
+    }
+
+    @IBAction func didReleaseStart() {
+        print("did release start")
+    }
+
+    @IBAction func didPressSelect() {
+        print("did press select")
+    }
+
+    @IBAction func didReleaseSelect() {
+        print("did release select")
+    }
+
     @IBAction func didPressUp() {
         print("did press up")
     }

@@ -127,13 +127,15 @@ class GameViewController: UIViewController {
         }
         emulator.reset()
         // try to create a CGContext wrapped around the NES screen buffer
+
+
         guard let _context = CGContext(data: emulator.getScreenBuffer()!,
                                       width: Int(emulator.width),
                                       height: Int(emulator.height),
                                       bitsPerComponent: 8,
                                       bytesPerRow: Int(emulator.bytesPerRow),
                                       space: CGColorSpaceCreateDeviceRGB(),
-                                      bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else {
+                                      bitmapInfo: CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.noneSkipFirst.rawValue) else {
             print("context failed")
             return
         }

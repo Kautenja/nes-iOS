@@ -9,7 +9,8 @@
 import UIKit
 import CoreGraphics
 
-/// Bit locations for controller actions
+// Bitmaps for controller actions
+
 let CONTROLLER_RIGHT: UInt8 =  0b10000000
 let CONTROLLER_LEFT: UInt8 =   0b01000000
 let CONTROLLER_DOWN: UInt8 =   0b00100000
@@ -34,77 +35,37 @@ class GameViewController: UIViewController {
     /// The NES emulator associated with this view controller
     var emulator: NESEmulator!
 
-    @IBAction func didPressStart() {
-        controller[0] |= CONTROLLER_START
-    }
+    // event handlers for button presses
 
-    @IBAction func didReleaseStart() {
-        controller[0] &= ~CONTROLLER_START
-    }
+    @IBAction func didPressStart()  { controller[0] |= CONTROLLER_START }
+    @IBAction func didPressSelect() { controller[0] |= CONTROLLER_SELECT }
+    @IBAction func didPressUp()     { controller[0] |= CONTROLLER_UP }
+    @IBAction func didPressDown()   { controller[0] |= CONTROLLER_DOWN }
+    @IBAction func didPressLeft()   { controller[0] |= CONTROLLER_LEFT }
+    @IBAction func didPressRight()  { controller[0] |= CONTROLLER_RIGHT }
+    @IBAction func didPressA()      { controller[0] |= CONTROLLER_A }
+    @IBAction func didPressB()      { controller[0] |= CONTROLLER_B }
 
-    @IBAction func didPressSelect() {
-        controller[0] |= CONTROLLER_SELECT
-    }
+    // event handlers for button releases
 
-    @IBAction func didReleaseSelect() {
-        controller[0] &= ~CONTROLLER_SELECT
-    }
-
-    @IBAction func didPressUp() {
-        controller[0] |= CONTROLLER_UP
-    }
-
-    @IBAction func didReleaseUp() {
-        controller[0] &= ~CONTROLLER_UP
-    }
-
-    @IBAction func didPressDown() {
-        controller[0] |= CONTROLLER_DOWN
-    }
-
-    @IBAction func didReleaseDown() {
-        controller[0] &= ~CONTROLLER_DOWN
-    }
-
-    @IBAction func didPressLeft() {
-        controller[0] |= CONTROLLER_LEFT
-    }
-
-    @IBAction func didReleaseLeft() {
-        controller[0] &= ~CONTROLLER_LEFT
-    }
-
-    @IBAction func didPressRight() {
-        controller[0] |= CONTROLLER_RIGHT
-    }
-
-    @IBAction func didReleaseRight() {
-        controller[0] &= ~CONTROLLER_RIGHT
-    }
-
-    @IBAction func didPressA() {
-        controller[0] |= CONTROLLER_A
-    }
-
-    @IBAction func didReleaseA() {
-        controller[0] &= ~CONTROLLER_A
-    }
-
-    @IBAction func didPressB() {
-        controller[0] |= CONTROLLER_B
-    }
-
-    @IBAction func didReleaseB() {
-        controller[0] &= ~CONTROLLER_B
-    }
+    @IBAction func didReleaseStart()  { controller[0] &= ~CONTROLLER_START }
+    @IBAction func didReleaseSelect() { controller[0] &= ~CONTROLLER_SELECT }
+    @IBAction func didReleaseUp()     { controller[0] &= ~CONTROLLER_UP }
+    @IBAction func didReleaseDown()   { controller[0] &= ~CONTROLLER_DOWN }
+    @IBAction func didReleaseLeft()   { controller[0] &= ~CONTROLLER_LEFT }
+    @IBAction func didReleaseRight()  { controller[0] &= ~CONTROLLER_RIGHT }
+    @IBAction func didReleaseA()      { controller[0] &= ~CONTROLLER_A }
+    @IBAction func didReleaseB()      { controller[0] &= ~CONTROLLER_B }
 
     /// Respond to the view loading initially
     override func viewDidLoad() {
         super.viewDidLoad()
         loadGame()
-
+        // start the game loop in the background
         DispatchQueue.global(qos: .background).async {
+            // create a clock to limit the framerate
             let clock = Clock(fps: 60)
+            // TODO: remove hardcoded true flag so game can shutdown
             while true {
                 clock.tick(function: {
                     self.emulator.step()
@@ -127,8 +88,6 @@ class GameViewController: UIViewController {
         }
         emulator.reset()
         // try to create a CGContext wrapped around the NES screen buffer
-
-
         guard let _context = CGContext(data: emulator.getScreenBuffer()!,
                                       width: Int(emulator.width),
                                       height: Int(emulator.height),
@@ -136,6 +95,7 @@ class GameViewController: UIViewController {
                                       bytesPerRow: Int(emulator.bytesPerRow),
                                       space: CGColorSpaceCreateDeviceRGB(),
                                       bitmapInfo: CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.noneSkipFirst.rawValue) else {
+            // TODO: handle this error more gracefully
             print("context failed")
             return
         }

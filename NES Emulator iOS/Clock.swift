@@ -28,6 +28,7 @@ class Clock {
     }
 
     /// Perform a tick of the clock.
+    /// TODO: fix
     func tick(function: () -> ()) {
         previousTime = currentTime
         currentTime = Date.timeIntervalSinceReferenceDate

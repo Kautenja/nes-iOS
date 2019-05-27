@@ -2,7 +2,7 @@
 
 ![IMG_0820](https://user-images.githubusercontent.com/2184469/58431766-f666ba80-8074-11e9-9d5e-4e58a4d1f787.png)
 
-An NES emulator for iOS based on the nes-py emulation system.
+An NES emulator for iOS based on the [nes-py](https://github.com/Kautenja/nes-py) emulation system.
 
 # Usage
 

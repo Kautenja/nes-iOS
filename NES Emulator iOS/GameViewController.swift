@@ -57,6 +57,26 @@ class GameViewController: UIViewController {
     @IBAction func didReleaseA()      { controller[0] &= ~CONTROLLER_A }
     @IBAction func didReleaseB()      { controller[0] &= ~CONTROLLER_B }
 
+    /// Load a list of NES files included in the app's bundle
+    private func loadNESFilenames() -> [String] {
+        // create a file manager with the default bundle path
+        let docsPath = Bundle.main.resourcePath!
+        let fileManager = FileManager.default
+        // try to load the contents of the default bundle
+        do {
+            var docsArray = try fileManager.contentsOfDirectory(atPath: docsPath)
+            // filter out non-NES files
+            docsArray = docsArray.filter { (filename) -> Bool in
+                return filename.contains(".nes")
+            }
+            return docsArray
+        } catch {
+            // TODO: handle error or ignore entirely
+            print(error)
+        }
+        return []
+    }
+
     /// Respond to the view loading initially
     override func viewDidLoad() {
         super.viewDidLoad()

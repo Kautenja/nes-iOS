@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		095005C7229B797A003CAF8E /* tetris.nes in Resources */ = {isa = PBXBuildFile; fileRef = 095005C6229B797A003CAF8E /* tetris.nes */; };
 		095005C9229B8E00003CAF8E /* zelda1.nes in Resources */ = {isa = PBXBuildFile; fileRef = 095005C8229B8E00003CAF8E /* zelda1.nes */; };
+		09506B1F22A6B07E00094ECF /* ROMSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09506B1E22A6B07E00094ECF /* ROMSelectViewController.swift */; };
 		09AE3D1C229B05260008C759 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D1B229B05260008C759 /* main.swift */; };
 		09AE3D62229B05520008C759 /* ppu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D47229B05520008C759 /* ppu.cpp */; };
 		09AE3D63229B05520008C759 /* mapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09AE3D48229B05520008C759 /* mapper.cpp */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		095005C6229B797A003CAF8E /* tetris.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = tetris.nes; sourceTree = "<group>"; };
 		095005C8229B8E00003CAF8E /* zelda1.nes */ = {isa = PBXFileReference; lastKnownFileType = file; path = zelda1.nes; sourceTree = "<group>"; };
+		09506B1E22A6B07E00094ECF /* ROMSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROMSelectViewController.swift; sourceTree = "<group>"; };
 		09AE3D18229B05260008C759 /* nesSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nesSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AE3D1B229B05260008C759 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		09AE3D25229B05520008C759 /* controller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = controller.hpp; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				09AE3DD3229B29550008C759 /* AppDelegate.swift */,
 				09AE3DD5229B29560008C759 /* GameViewController.swift */,
+				09506B1E22A6B07E00094ECF /* ROMSelectViewController.swift */,
 				09AE3DD7229B29560008C759 /* Main.storyboard */,
 				09AE3DDA229B29560008C759 /* LaunchScreen.storyboard */,
 				09AE3DDD229B29560008C759 /* Info.plist */,
@@ -412,6 +415,7 @@
 				09AE3DFC229B2A130008C759 /* cartridge.cpp in Sources */,
 				09AE3DFD229B2A130008C759 /* emulator.cpp in Sources */,
 				09AE3DFE229B2A130008C759 /* picture_bus.cpp in Sources */,
+				09506B1F22A6B07E00094ECF /* ROMSelectViewController.swift in Sources */,
 				09AE3DFF229B2A130008C759 /* main_bus.cpp in Sources */,
 				09AE3E00229B2A130008C759 /* controller.cpp in Sources */,
 				09AE3E01229B2A130008C759 /* mapper_CNROM.cpp in Sources */,
